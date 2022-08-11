@@ -1,0 +1,16 @@
+<div class="container">
+    <table>
+        <tr>
+            <td>Name :</td><td>{{userData.user.userName}}</td>
+        </tr>
+        <tr>
+            <td>Gender :</td><td>{{userData.user.gender}}</td>
+        </tr>
+        <tr>
+            <td>Email ID :</td><td>{{userData.emailId}}</td>
+        </tr>
+        <tr>
+            <td><button class="btn btn-primary" (click)="editData(userData.logId)">Edit</button></td>
+        </tr>
+    </table>
+</div>

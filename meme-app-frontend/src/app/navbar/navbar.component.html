@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark pt-3 pb-3 ml-0 mr-0 mt-0">
+    <a class="navbar-brand" routerLink="home"><img src="/assets/img/avatar.jpg" style="height: 30px;width: 30px;">Meme Zone</a>
+    <ul class="navbar-nav ml-auto">
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home">home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="imageUpload">upload</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="register" *ngIf="nav.registerVisible">register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login" *ngIf="nav.loginVisible">login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="login" *ngIf="nav.logoutVisible">logout</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="profile" *ngIf="nav.profileVisible">profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="viewAllUsers">view all users</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="adminViewAllImages">view all images</a>
+      </li>
+    
+    </ul>
+    
+  </nav>

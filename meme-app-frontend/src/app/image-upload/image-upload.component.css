@@ -1,0 +1,24 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+body{
+    margin: 0px;
+    padding:0px
+}
+.file-input{
+    visibility: hidden;
+    /* position: absolute; */
+}
+
+.form-st,.file-input{
+    position:absolute;
+}
+.form-st{
+    top:80px
+}
+.file-upload{
+    
+    right: 50%;
+}
+.form-inp{
+    top: 150px;
+    right: 50%;
+}

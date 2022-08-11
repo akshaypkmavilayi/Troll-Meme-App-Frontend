@@ -1,0 +1,21 @@
+
+<form [formGroup]="imageUploadForm" (ngSubmit)="getData()" class="pb-0">
+<input type="file" class="file-input"  
+       (change)="onFileSelected($event)" formControlName="memeImage" #fileUpload>  
+ 
+<div class="file-upload form-group form-st">  
+  
+   {{fileName || "No file uploaded yet."}}  
+  
+    <button mat-mini-fab color="primary" class="upload-btn form-control"  
+      (click)="fileUpload.click()">  
+        attach_file
+    </button> 
+</div> <br>
+<div class="form-st form-inp form-group">
+  <label for="movie">Movie:</label><input class="form-control" type="text" formControlName="movieName" ><br>
+  <label for="movie">Actors:</label><input class="form-control" type="text" formControlName="actors"><br>
+  <input type="submit" class="btn btn-primary">
+</div>
+</form>
+

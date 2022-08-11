@@ -1,0 +1,19 @@
+<div class="container">
+<div class="row">
+        <div class="col-md-4" *ngFor="let i of image">
+            <div class="card border-0">
+                <div class="card-header border-0">
+                    <img src="{{i.currentTarget.result}}" alt="Snow" style="width:100%" class="responsive">
+                </div>
+                <div class="card-body border-0">{{i.movie}}</div>
+                <div class="card-body border-0">{{i.actor}}</div>
+                <div class="card-footer border-0">{{i.timeS}}</div>
+                <button (click)="downloadMeme(i.currentTarget.result,i.fName)" class="btn btn-primary stretched-link">Download</button>
+              </div>
+         
+        </div>
+        
+      </div>
+    </div>
+    
+    

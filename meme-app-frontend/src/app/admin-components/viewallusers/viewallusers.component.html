@@ -1,0 +1,13 @@
+<div class="container d-flex justify-content-center">
+<table>
+    <tr>
+     <th>user id</th>   <th>id</th><th>name</th><th>gender</th><th>email</th><th>edit</th><th>delete</th>
+    </tr>
+    <tr *ngFor="let u of allUsers" class="pt-2 pb-2">
+        <td>{{u.user.userId}}</td>
+        <td>{{u.logId}}</td><td>{{u.user.userName}}</td><td>{{u.user.gender}}</td><td>{{u.emailId}}</td>
+        <td><button class="btn btn-primary" (click)="editDataId(u.logId)">edit</button></td>
+        <td><button class="btn btn-danger" (click)="deleteDataId(u.logId)">delete</button></td>
+    </tr>
+</table>
+</div>
