@@ -10,6 +10,8 @@ import { Observer } from 'rxjs/internal/types';
 
 import { BackendService } from '../backend.service';
 import { NavbarService } from '../navbar.service';
+import { MemecommonService } from '../memecommon.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +30,8 @@ export class HomeComponent implements OnInit {
   
   
   constructor(private backend:BackendService,private sanitizer: DomSanitizer,
-    private navbar:NavbarService,private nav:NavbarService) { }
+    private navbar:NavbarService,private nav:NavbarService, private memeSerivice:MemecommonService,
+    private router:Router) { }
 
   ngOnInit(): void {
     
@@ -94,7 +97,8 @@ export class HomeComponent implements OnInit {
       this.image[i] = this.dataURL[i];
       this.image[i].id = memeId;
       this.image[i].movie = movieName;
-      this.image[i].actor = actors;
+      this.image[i].actor = this.actorNameToArray(actors);
+      // console.log(this.actorNameToArray(actors))
       this.image[i].timeS =day+'/'+month+'/'+year;
       this.image[i].fName = imageName;
       
@@ -120,6 +124,24 @@ export class HomeComponent implements OnInit {
         link.href = dataurl;
         link.download = filename;
         link.click();
+     }
+     actorNameToArray(actorNames : any){
+      
+      
+        var actorNameArray = new Array();
+        if(actorNames.includes(',')){
+          actorNameArray = actorNames.split(',');
+        }else{
+          actorNameArray = [actorNames];
+        }
+        return actorNameArray;
+        
+      
+     }
+     //TODO: need logic to render the memes with the actor name
+     getMemesofTheActor(actorName : any){
+      this.memeSerivice.setActor(actorName);
+      this.router.navigate(['memesOfTheActor']);
      }
   }
  
