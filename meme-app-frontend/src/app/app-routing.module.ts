@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisteruserComponent } from './registeruser/registeruser.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { MemesofactorsComponent } from './memesofactor/memesofactors/memesofactors.component';
 
 const routes: Routes = [{
   path:'navbar',
@@ -65,6 +66,10 @@ const routes: Routes = [{
 {
   path:'adminEditImage',
   component:AdmineditimageComponent
+},
+{
+  path:'memesOfTheActor',
+  component:MemesofactorsComponent
 }];
 
 @NgModule({

@@ -1,19 +1,30 @@
 <div class="container">
-<div class="row">
-        <div class="col-md-4" *ngFor="let i of image">
-            <div class="card border-0">
-                <div class="card-header border-0">
-                    <img src="{{i.currentTarget.result}}" alt="Snow" style="width:100%" class="responsive">
-                </div>
-                <div class="card-body border-0">{{i.movie}}</div>
-                <div class="card-body border-0">{{i.actor}}</div>
-                <div class="card-footer border-0">{{i.timeS}}</div>
-                <button (click)="downloadMeme(i.currentTarget.result,i.fName)" class="btn btn-primary stretched-link">Download</button>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let i of image">
+      <div class="card border-0 mb-2" style="width: 300px; height: 400px;" data-toggle="tooltip" title="uploaded on {{i.timeS}}">
+          <div class="card-header border-0">
+            <img src="{{i.currentTarget.result}}" alt="Snow" style="width:100%" class="responsive">
+          </div>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">Movie : {{i.movie}}</h4>
+                  <!-- <h5 class="card-text">Actors : {{i.actor}}</h5> -->
+              <div class="d-flex .flex-sm-row flex-wrap mr-auto" *ngIf="i.actor?.length > 0">
+                <div class="mt-1">Actors :</div>
+                <div *ngFor="let j of i.actor">
+                <span><button class="btn btn-secondary ml-1 mt-1 btn-sm p-1" (click)="getMemesofTheActor(j)">{{j}}</button></span>
               </div>
-         
-        </div>
-        
+              </div>
+            </div>
+                
+              <div class="card-footer mt-">
+                <button (click)="downloadMeme(i.currentTarget.result,i.fName)" class="btn btn-primary">Download</button>
+              </div>
+                
       </div>
+         
     </div>
+        
+  </div>
+</div>
     
     

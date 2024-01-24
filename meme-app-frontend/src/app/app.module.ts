@@ -19,6 +19,7 @@ import { WelcomeComponent } from './admin-components/welcome/welcome.component';
 import { ViewallusersComponent } from './admin-components/viewallusers/viewallusers.component';
 import { AdminedituserComponent } from './admin-components/adminedituser/adminedituser.component';
 import { AdmineditimageComponent } from './admin-components/admineditimage/admineditimage.component';
+import { MemesofactorsComponent } from './memesofactor/memesofactors/memesofactors.component';
 
 
 
@@ -39,6 +40,7 @@ import { AdmineditimageComponent } from './admin-components/admineditimage/admin
          ViewallusersComponent,
          AdminedituserComponent,
          AdmineditimageComponent,
+         MemesofactorsComponent,
         
     
   ],
